@@ -3,27 +3,28 @@ import { createStackNavigator } from 'react-navigation';
 import { Text, View, Button } from 'react-native';
 
 const SignIn = (props) => {
-  console.log(props);
   const { navigation } = props;
   return (
-    <View>
+    <View style= {{ flex: 1, justifyContent: 'center' }}>
+      <Text>Componente SignIn</Text>
       <Button
         title="Ir a SignUp"
         onPress={() => { navigation.navigate('SignUp'); }}
       />
-      <Text>Signin</Text>
+      <Text>SignIn</Text>
     </View>
   );
 };
 const SignUp = (props) => {
   const { navigation } = props;
   return (
-    <View>
+    <View style= {{ flex: 1, justifyContent: 'center' }}>
+      <Text>Componente SignUp</Text>
       <Button
-        title="Ir a SignIn"
-        onPress={() => { navigation.navigate('SignIn'); }}
+        title="Regresar"
+        onPress={() => { navigation.goBack(); }}
       />
-      <Text>Signup</Text>
+      <Text>SignUp</Text>
     </View>
   );
 }
